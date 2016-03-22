@@ -1,12 +1,6 @@
 int snelheid = 200;
 int debug = 400;
 const int start = 2;
-int buttonState = 0;
-int buttonLastState = 0;
-int buttonStateSelectie = 0;
-int buttonLastStateSelectie = 0;
-int buttonStartState = 0;
-int buttonStartStateLast = 0;
 int PWM1 = 5;
 int PWM2 = 6;
 int richting1 = 4;
@@ -14,6 +8,7 @@ int richting2 = 7;
 int sensor1 = A0;
 int sensor2 = A1;
 int sensor3 = A2;
+int huidigeLetter = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,6 +26,15 @@ void loop() {
     schrijfLetterE();
     delay(500);
     schrijfLetterP();
+      
+//    roteerLinksom(snelheid, 1000);
+//    delay(debug);
+//    roteerRechtsom(snelheid, 1000);
+//    delay(debug);
+//    roteerLinksom(snelheid, 2000);
+//    delay(debug);
+//    roteerRechtsom(snelheid, 2000);
+//    delay(10000);
   }
 }
 
