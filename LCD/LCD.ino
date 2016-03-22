@@ -9,7 +9,7 @@ int sensor1 = A0;
 int sensor2 = A1;
 int sensor3 = A2;
 int huidigeLetter = 0;
-int getal[7]={1,2,3,8,9,10,11,12};
+int getal[7]={1,2,3,8,9,10,11};
 
 void setup() {
   for(int x=0; x<7; x++){
@@ -361,13 +361,13 @@ void toonLetter(int c, int y){
     //Letter L op het eerste 11-segmenten-display
     
     //pinMode(9, OUTPUT);
-    digitalWrite(3, HIGH);
+    digitalWrite(2, HIGH);
+    digitalWrite(9, HIGH);
     digitalWrite(10, HIGH);
-    digitalWrite(11, HIGH);
     delay(1);
-    digitalWrite(3, LOW);
+    digitalWrite(2, LOW);
+    digitalWrite(9, LOW);
     digitalWrite(10, LOW);
-    digitalWrite(11, LOW);
     //pinMode(9, INPUT);
 
 
@@ -378,26 +378,26 @@ void toonLetter(int c, int y){
       case 1:
       //Cijfer 1 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
+        digitalWrite(2, HIGH);
         digitalWrite(9, HIGH);
-        digitalWrite(12, HIGH);
         delay(1);
+        digitalWrite(2, LOW);
         digitalWrite(9, LOW);
-        digitalWrite(12, LOW);
         pinMode(12, INPUT);
        break;
 
       case 2:
       //Cijfer 2 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
-        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(3, HIGH);
         digitalWrite(8, HIGH);
-        digitalWrite(9, HIGH);
         digitalWrite(10, HIGH);
         digitalWrite(11, HIGH);
         delay(1);
-        digitalWrite(2, LOW);
+        digitalWrite(1, LOW);
+        digitalWrite(3, LOW);
         digitalWrite(8, LOW);
-        digitalWrite(9, LOW);
         digitalWrite(10, LOW);
         digitalWrite(11, LOW);
         pinMode(12, INPUT);
@@ -406,76 +406,76 @@ void toonLetter(int c, int y){
       case 3:
       //Cijfer 3 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
-        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
+        digitalWrite(3, HIGH);
         digitalWrite(8, HIGH);
-        digitalWrite(9, HIGH);
+        digitalWrite(10, HIGH);
         digitalWrite(11, HIGH);
-        digitalWrite(12, HIGH);
         delay(1);
-        digitalWrite(2, LOW);
+        digitalWrite(1, LOW);
+        digitalWrite(3, LOW);
         digitalWrite(8, LOW);
-        digitalWrite(9, LOW);
+        digitalWrite(10, LOW);
         digitalWrite(11, LOW);
-        digitalWrite(12, LOW);
         pinMode(12, INPUT);
        break;
 
       case 4:
       //Cijfer 4 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
+        digitalWrite(1, HIGH);
         digitalWrite(2, HIGH);
-        digitalWrite(3, HIGH);
-        digitalWrite(9, HIGH);
-        digitalWrite(12, HIGH);
+        digitalWrite(8, HIGH);
+        digitalWrite(11, HIGH);
         delay(1);
+        digitalWrite(1, LOW);
         digitalWrite(2, LOW);
-        digitalWrite(3, LOW);
-        digitalWrite(9, LOW);
-        digitalWrite(12, LOW);
+        digitalWrite(8, LOW);
+        digitalWrite(11, LOW);
         pinMode(12, INPUT);
        break;
 
       case 5:
       //Cijfer 5 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
+        digitalWrite(1, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(3, HIGH);
-        digitalWrite(8, HIGH);
+        digitalWrite(10, HIGH);
         digitalWrite(11, HIGH);
-        digitalWrite(12, HIGH);
         delay(1);
+        digitalWrite(1, LOW);
         digitalWrite(2, LOW);
         digitalWrite(3, LOW);
-        digitalWrite(8, LOW);
+        digitalWrite(10, LOW);
         digitalWrite(11, LOW);
-        digitalWrite(12, LOW);
         pinMode(12, INPUT);
        break;
 
       case 6:
       //Cijfer 10 op het tweede 11-segmenten-display
         pinMode(12, OUTPUT);
+        digitalWrite(1, HIGH);
         digitalWrite(2, HIGH);
         digitalWrite(3, HIGH);
-        digitalWrite(8, HIGH);
+        digitalWrite(9, HIGH);
         digitalWrite(10, HIGH);
         digitalWrite(11, HIGH);
-        digitalWrite(12, HIGH);
         delay(1);
+        digitalWrite(1, LOW);
         digitalWrite(2, LOW);
         digitalWrite(3, LOW);
-        digitalWrite(8, LOW);
+        digitalWrite(9, LOW);
         digitalWrite(10, LOW);
         digitalWrite(11, LOW);
-        digitalWrite(12, LOW);
         pinMode(12, INPUT);
        break;
 
        default:
         pinMode(12, OUTPUT);
-        digitalWrite(2, HIGH);
+        digitalWrite(1, HIGH);
         delay(1);
-        digitalWrite(2, LOW);
+        digitalWrite(1, LOW);
         pinMode(12, INPUT);
 
       
