@@ -1,6 +1,6 @@
 int snelheid = 200;
 int debug = 400;
-const int start = 2;
+const int start = 13;
 int PWM1 = 5;
 int PWM2 = 6;
 int richting1 = 4;
@@ -13,18 +13,16 @@ int huidigeLetter = 0;
 void setup() {
   // put your setup code here, to run once:
   pinMode(start, INPUT);
-  Serial.begin(9600);
 }
 
 void loop() {
   if(digitalRead(start)){
-    Serial.println("Begonnen");
-    schrijfLetterS();
-    delay(500);
-    schrijfLetterO();
-    delay(500);
-    schrijfLetterE();
-    delay(500);
+//    schrijfLetterS();
+//    delay(500);
+//    schrijfLetterO();
+//    delay(500);
+//    schrijfLetterE();
+//    delay(500);
     schrijfLetterP();
       
 //    roteerLinksom(snelheid, 1000);
@@ -75,7 +73,7 @@ void schrijfLetterE(){    //klaar
   delay(debug);
   roteerLinksom(snelheid, 1100);
   delay(debug);
-  rijdVooruit(snelheid, 1860);
+  rijdVooruit(snelheid, 1500);
   delay(debug);
   roteerLinksom(snelheid, 1100);
   delay(debug);
@@ -97,11 +95,11 @@ void schrijfLetterO(){    //klaar
   delay(debug);
   rijdNaarReferentielijn();
   delay(debug);
-  roteerLinksom(snelheid, 1100);
+  roteerLinksom(snelheid, 1000);
   delay(debug);
   rijdVooruit(snelheid, 1500);
   delay(debug);
-  roteerLinksom(snelheid, 1100);
+  roteerLinksom(snelheid, 1000);
    
 }
 
@@ -112,8 +110,12 @@ void schrijfLetterP(){    //klaar
   delay(debug); 
   roteerRechtsom(snelheid,1100);
   delay(debug);
+  rijdVooruit(snelheid, 200);
+  delay(debug);
 //  draaiRechtsomVooruit(snelheid, 4200);
   draaiRechtsomVooruitCirkelKlein(3500);
+  delay(debug);
+  rijdVooruit(snelheid, 220);
   delay(debug);
   roteerLinksom(snelheid, 1050);
   delay(debug);
@@ -134,26 +136,22 @@ void schrijfLetterS(){    //klaar
   delay(debug);
   rijdVooruit(snelheid, 250);
   delay(debug);
-  draaiLinksomVooruitCirkelKlein(3500);
+  draaiLinksomVooruitCirkelKlein(3200);
   delay(debug);
-  draaiRechtsomVooruitCirkelKlein(3500);
+  draaiRechtsomVooruitCirkelKlein(3350);
   delay(debug);
-  rijdVooruit(snelheid, 250);
+  rijdVooruit(snelheid, 500);
   delay(debug);
-  roteerRechtsom(snelheid, 2000);
-  delay(debug);
-  rijdVooruit(snelheid, 250);
-  delay(debug);
-  draaiLinksomVooruitCirkelKlein(3500);
-  delay(debug);
-  draaiRechtsomVooruitCirkelKlein(3500);
+  roteerRechtsom(snelheid, 1000);
   delay(debug);
   rijdNaarReferentielijn();
-  roteerLinksom(snelheid, 1100); 
+  delay(debug);
+  rijdNaarReferentielijn();
+  roteerLinksom(snelheid, 1000); 
   delay(500);
-  rijdVooruit(snelheid, 1500); 
+  rijdVooruit(snelheid, 360); 
   delay(500);
-  roteerLinksom(snelheid, 1100);
+  roteerLinksom(snelheid, 1000);
   
 }
 
