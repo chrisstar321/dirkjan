@@ -26,7 +26,10 @@ void loop() {
 //    delay(500);
 //    schrijfLetterE();
 //    delay(500);
-    schrijfLetterP();
+//    schrijfLetterP();
+
+//    rijdNaarReferentielijn();
+    toonLetter(1, 850);
       
 //    roteerLinksom(snelheid, 1000);
 //    delay(debug);
@@ -72,7 +75,8 @@ void schrijfLetterE(){    //klaar
   delay(debug);
   roteerRechtsom(snelheid, 1050); 
   delay(debug);
-  rijdNaarReferentielijn();
+  rijd10cmVooruit();
+//  rijdNaarReferentielijn();
   delay(debug);
   roteerLinksom(snelheid, 1100);
   delay(debug);
@@ -88,15 +92,16 @@ void schrijfLetterO(){    //klaar
   delay(debug);
   rijdVooruit(snelheid, 300);
   delay(debug);
-  draaiRechtsomVooruit(snelheid, 4300);
+  draaiRechtsomVooruit(snelheid, 4200);
   delay(debug);
   rijdVooruit(snelheid, 300);
   delay(debug);
-  draaiRechtsomVooruit(snelheid, 4300);
+  draaiRechtsomVooruit(snelheid, 4200);
   delay(debug);
   roteerLinksom(snelheid, 2000);
   delay(debug);
-  rijdNaarReferentielijn();
+  rijd10cmVooruit();
+//  rijdNaarReferentielijn();
   delay(debug);
   roteerLinksom(snelheid, 1000);
   delay(debug);
@@ -122,7 +127,8 @@ void schrijfLetterP(){    //klaar
   delay(debug);
   roteerLinksom(snelheid, 1050);
   delay(debug);
-  rijdNaarReferentielijn();
+  rijd10cmVooruit();
+//  rijdNaarReferentielijn();
   delay(debug);
   roteerLinksom(snelheid, 1100);
   delay(debug);
@@ -137,7 +143,7 @@ void schrijfLetterS(){    //klaar
   delay(debug);
   roteerRechtsom(snelheid, 1100);
   delay(debug);
-  rijdVooruit(snelheid, 250);
+  rijdVooruit(snelheid, 500);
   delay(debug);
   draaiLinksomVooruitCirkelKlein(3200);
   delay(debug);
@@ -147,9 +153,9 @@ void schrijfLetterS(){    //klaar
   delay(debug);
   roteerRechtsom(snelheid, 1000);
   delay(debug);
-  rijdNaarReferentielijn();
+  rijd10cmVooruit();
+//  rijdNaarReferentielijn();
   delay(debug);
-  rijdNaarReferentielijn();
   roteerLinksom(snelheid, 1000); 
   delay(500);
   rijdVooruit(snelheid, 360); 
@@ -281,7 +287,7 @@ boolean detecteerKaderlijn(){
 void rijdNaarReferentielijn(){
   int waarde = 750;
   while(!(analogRead(A0) > waarde && analogRead(A1) < waarde && analogRead(A2) > waarde)){   //alleen sensor 2 detecteert een lijn
-    rijdVooruit(100, 10);
+    rijdVooruit(150, 2);
   }
 }
 
